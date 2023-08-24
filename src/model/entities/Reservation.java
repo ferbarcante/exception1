@@ -12,6 +12,13 @@ public class Reservation {
 	private Date checkOut;
 	
 	private static SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+	public Reservation(Integer roomNumber, Date checkIn, Date checkOut) {
+		this.checkIn = checkIn;
+		this.checkOut = checkOut;
+		this.roomNumber  = roomNumber;
+	}
+
 	public Integer getRoomNumber() {
 		return roomNumber;
 	}
