@@ -34,8 +34,13 @@ public class Program {
 			System.out.print("Check-out date: ");
 			checkOut = sdf.parse(scan.next());
 
-			rv.updateDates(checkIn, checkOut);
-			System.out.println("Reservation: " + rv);
+			String error = rv.updateDates(checkIn, checkOut);
+			if(error!=null){
+				System.out.println("Error in reservation: " + error);
+			} else {
+				System.out.println("Reservation: " + rv);
+
+			}
 
 		}
 
